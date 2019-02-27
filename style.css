@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-background: rgb(245, 222, 232);
+}
+
+body {
+    background: var(--page-background);
+}
+
+.header {
+    text-align: center;
+}
+
+.header__header-main-title {
+    font-family: 'Playfair Display';
+    letter-spacing: .3rem;
+}
+
+.header__header-sub-title {
+    font-family: 'Jura';
+    letter-spacing: .1rem;
+}
