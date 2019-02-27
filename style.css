@@ -5,6 +5,7 @@
 }
 
 :root {
+    --white: rgb(230, 240, 245);
     --page-background: rgb(225, 202, 212);
 }
 
@@ -17,16 +18,54 @@ body {
 
 .header {
     text-align: center;
+    background: url('./video/header_bg.jpg') center / cover fixed no-repeat;
+    height: 40vh;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@media screen and (min-width: 767px) {
+    .header {
+        z-index: -2;
+    }
 }
 
 .header__header-main-title {
     font-family: 'Playfair Display';
-    letter-spacing: .3rem;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    text-shadow: .1rem .1rem black;
+    padding-bottom: .7rem;
 }
 
 .header__header-sub-title {
     font-family: 'Jura';
-    letter-spacing: .1rem;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.video__container, .video__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.video__overlay {
+    background-color: rgba(240, 240, 240, 0.1);
+    z-index: 0;
+}
+
+.video__item {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* NOTE -- Spinner styling is at bottom of page */
