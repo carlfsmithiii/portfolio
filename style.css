@@ -7,6 +7,7 @@
 :root {
     --white: rgb(230, 240, 245);
     --green: #29A036;
+    --dark-green: #227e2c;
     /* --page-background: rgb(225, 202, 212); */
     --page-background: #f5f5f5;
 }
@@ -39,25 +40,36 @@ body {
     /* color: var(--green); */
     color: white;
     overflow: hidden;
+    transition: all .3s linear;
+    transition-delay: .05s
 }
 
 .nav__container:hover {
     width: 20rem;
 }
 
-.nav {
-    width: 10rem;
-}
+.nav {}
 
 .nav__links {
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .nav__single-link {
-    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     font-size: 2rem;
     border-bottom: 1px solid #000;
     white-space: nowrap;
+    transition: all .3s ease-out;
+    transition-delay: .05s;
+}
+
+.nav__single-link:hover {
+    background: var(--dark-green);
+    padding-left: 1rem;
 }
 
 .nav__icon-container {
@@ -72,7 +84,7 @@ body {
 /* end of nav */
 
 .page-content-wrapper {
-    margin-left: 5rem;
+    margin-left: 5.5rem;
     width: 100%;
 }
 
