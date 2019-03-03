@@ -57,19 +57,26 @@ body {
     min-height: 100vh;
 }
 
+.nav__single-link-container {
+    border-bottom: 1px solid #000;
+}
+
 .nav__single-link {
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 2rem;
-    border-bottom: 1px solid #000;
     white-space: nowrap;
     transition: all .3s ease-out;
     transition-delay: .05s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav__single-link:hover {
     background: var(--dark-green);
     padding-left: 1rem;
+    font-size: 2.3rem;
 }
 
 .nav__icon-container {
