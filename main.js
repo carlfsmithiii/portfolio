@@ -10,5 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 document
   .getElementById("video__switch-container")
   .addEventListener("click", function() {
-    document.getElementById("video__switch-cover").classList.toggle("on");
+    const cover = document.getElementById("video__switch-cover");
+    const video = document.getElementById("video");
+    cover.classList.toggle("on");
+    const play = cover.classList.contains("on");
+    setTimeout(() => {
+      if (play) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }, 200);
   });
