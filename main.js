@@ -6,3 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     2000
   );
 });
+
+document
+  .getElementById("video__switch-container")
+  .addEventListener("click", function() {
+    document.getElementById("video__switch-cover").classList.toggle("on");
+  });
